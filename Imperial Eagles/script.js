@@ -59,6 +59,8 @@ document.querySelector('.hero-slideshow').addEventListener('mouseout', function(
     slideInterval = setInterval(function() { plusSlides(1); }, 4000); // Keep this the same as above
 });
 
+//Form submission//
+
 document.querySelector('.contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
