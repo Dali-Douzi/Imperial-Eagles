@@ -2,7 +2,7 @@ body {
     font-family: 'Press Start 2P', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right,#ddae12, #493800);
+    background: linear-gradient(to left,#292929, #747474);
     padding-top: 50px;
 }
 
@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar {
-    background: linear-gradient(to right,#ddae12, #493800); /* Navbar gradient */
+    background: linear-gradient(to right,#ddae12, #493800);
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -92,62 +92,74 @@ body::-webkit-scrollbar {
 }
   
 .team-container {
-    padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px;
-    height: 90vh;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
-  
-.team-title {
+
+.team-title-image {
     width: 100%;
-    text-align: center;
-    color: #e9b552;
-    padding: 20px;
-    font-size: 2em;
-    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-  
+
+.team-title-image img {
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 .card {
     background: #333;
     border: 3px solid #e9b552;
     border-radius: 5px;
-    width: 300px;
+    width: calc(18% - 20px); /* Subtract the total gap size divided by the number of cards per row */
     text-align: center;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
-  
+
 .member-photo {
-    width: 100%; /* Full width of the card */
-    height: 500px; /* Fixed height for all images */
-    object-fit: cover; /* Cover the fixed dimension area */
+    width: 15vw;
+    height: 50vh;
+    object-fit: cover;
     border-radius: 5px;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
+
 .member-name {
     color: #e9b552;
-    margin: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .member-role {
-    color: #c9c9c9; /* Lighter text color for roles */
-    font-size: 1em; /* Smaller font size */
-    margin: 0; /* Remove margin if necessary */
-    padding-bottom: 10px; /* Space below the role before the end of the card */
+    color: #c9c9c9;
+    font-size: 0.9em;
 }
-  
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
     .team-container {
-      flex-direction: column;
+        flex-direction: column;
+        align-items: center;
     }
     .card {
-      width: 80%;
-      margin: 0 auto; /* Center cards on smaller screens */
+        width: 80%;
+        max-width: 300px;
+    }
+    .member-photo {
+        width: 90%;
+        height: auto;
     }
 }
-  
